@@ -2,7 +2,7 @@
   {
     "modid": "petphraseclient",
     "name": "PetPhrase-Client",
-    "description": "Apply petphrase to your messages!",
+    "description": "Apply pet phrase to your messages!",
     "version": "${version}",
     "mcversion": "${mcversion}",
     "url": "",
