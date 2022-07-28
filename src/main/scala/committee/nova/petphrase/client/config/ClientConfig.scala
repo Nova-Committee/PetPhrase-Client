@@ -6,14 +6,18 @@ import org.apache.logging.log4j.Logger
 
 object ClientConfig {
   var petPhrase: String = ""
-  private var config: Configuration = _
+  var config: Configuration = _
   private var logger: Logger = _
 
   def init(event: FMLPreInitializationEvent): Unit = {
     logger = event.getModLog
     config = new Configuration(event.getSuggestedConfigurationFile)
+    sync()
+  }
+
+  def sync(): Unit = {
     config.load()
-    petPhrase = config.getString("petPhrase", Configuration.CATEGORY_GENERAL, "nya", "The pet phrase which should be added into your messages", "config.petphraseclient.petPhrase.info")
+    petPhrase = config.getString("petPhrase", Configuration.CATEGORY_CLIENT, "nya", "The pet phrase which should be added into your messages", "config.petphraseclient.petPhrase.info")
     config.save()
   }
 }

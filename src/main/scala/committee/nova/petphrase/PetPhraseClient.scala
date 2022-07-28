@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.Mod.EventHandler
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent
 import net.minecraftforge.fml.common.{Mod, SidedProxy}
 
-@Mod(modid = MODID, useMetadata = true, modLanguage = "scala")
+@Mod(modid = MODID, useMetadata = true, clientSideOnly = true, modLanguage = "scala", guiFactory = "committee.nova.petphrase.client.gui.factory.GuiFactory")
 object PetPhraseClient {
   final val MODID = "petphraseclient"
   final val packagePrefix = "committee.nova.petphrase.proxies."
