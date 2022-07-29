@@ -1,0 +1,9 @@
+modLoader = "javafml"
+loaderVersion = "[32,)"
+license = "AGPL v3"
+[[mods]]
+modId = "petphraseclient"
+version = "1.0.0"
+displayName = "PetPhrase-Client"
+authors = "Tapio"
+description = "Apply pet phrase to your messages!"
