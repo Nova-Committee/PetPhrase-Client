@@ -6,7 +6,7 @@ import scala.annotation.tailrec
 import scala.collection.immutable
 
 object StringUtil {
-  val punctuations: immutable.Seq[Char] = '!' :: '?' :: '.' :: '(' :: ')' :: '！' :: '？' :: '。' :: '（' :: '）' :: '~' :: '\'' :: '"' :: '”' :: '“' :: Nil
+  val punctuations: immutable.Seq[Char] = '!' :: '?' :: '.' :: '(' :: ')' :: '！' :: '？' :: '。' :: '（' :: '）' :: '~' :: '\'' :: '"' :: '”' :: '“' :: '‘' :: '’' :: Nil
 
   def getLastPunc(string: String): Int = {
     val length = string.length
