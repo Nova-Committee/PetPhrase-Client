@@ -19,6 +19,7 @@ public class StringUtil {
     public static String fillPetPhraseIn(String original, String petPhrase) {
         final int index = getLastPunc(original) + 1;
         if (index == 0) return original;
+        if (original.charAt(0) == '/') return original;
         return StringUtils.substring(original, 0, index) + petPhrase + StringUtils.substring(original, index);
     }
 }
