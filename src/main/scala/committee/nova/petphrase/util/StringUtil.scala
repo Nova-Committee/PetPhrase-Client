@@ -19,9 +19,9 @@ object StringUtil {
   }
 
   def fillPetPhraseIn(original: String, petPhrase: String): String = {
+    if (original.charAt(0) == '/') return original
     val index = getLastPunc(original) + 1
     if (index == 0) return original
-    if (original.charAt(0) == '/') return original
     StringUtils.substring(original, 0, index) + petPhrase + StringUtils.substring(original, index)
   }
 }
