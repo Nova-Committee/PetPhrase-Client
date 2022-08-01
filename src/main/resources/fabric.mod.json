@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "petphrase",
+  "version": "${version}",
+  "name": "PetPhrase",
+  "description": "",
+  "authors": [
+    "Tapio"
+  ],
+  "contact": {},
+  "license": "AGPL-3.0",
+  "icon": "assets/petphrase/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "committee.nova.petphrase.client.PetphraseClient"
+    ]
+  },
+  "mixins": [
+    "petphrase.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.8",
+    "minecraft": "1.16.5"
+  }
+}
