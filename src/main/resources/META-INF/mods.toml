@@ -1,0 +1,11 @@
+modLoader = "javafml"
+loaderVersion = "[37,)"
+license = "AGPL v3"
+[[mods]]
+modId = "petphraseclient"
+version = "1.0.2"
+displayName = "PetPhrase-Client"
+credits = ""
+authors = "Tapio"
+description = '''
+'''
