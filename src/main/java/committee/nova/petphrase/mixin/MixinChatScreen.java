@@ -1,5 +1,6 @@
 package committee.nova.petphrase.mixin;
 
+import committee.nova.petphrase.client.PetphraseClient;
 import committee.nova.petphrase.util.StringUtil;
 import net.minecraft.client.gui.screen.Screen;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,7 +16,7 @@ public abstract class MixinChatScreen {
 
     @Inject(method = "sendMessage(Ljava/lang/String;)V", at = @At("HEAD"), cancellable = true)
     public void onSendMessage(String message, CallbackInfo ci) {
-        final String newMsg = StringUtil.fillPetPhraseIn(message, "nya");
+        final String newMsg = StringUtil.fillPetPhraseIn(message, PetphraseClient.getPetPhrase());
         this.sendMessage(newMsg, true);
         ci.cancel();
     }

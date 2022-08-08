@@ -9,7 +9,6 @@
   ],
   "contact": {},
   "license": "AGPL-3.0",
-  "icon": "assets/petphrase/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
@@ -20,7 +19,7 @@
     "petphrase.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.8",
+    "fabricloader": "*",
     "minecraft": "1.16.5"
   }
 }
