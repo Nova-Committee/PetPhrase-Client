@@ -20,6 +20,7 @@
   ],
   "depends": {
     "fabricloader": "*",
-    "minecraft": "*"
+    "minecraft": "*",
+    "cloth-config": "*"
   }
 }
