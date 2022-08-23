@@ -16,7 +16,7 @@ public abstract class MixinChatScreen {
 
     @Inject(method = "sendMessage(Ljava/lang/String;)V", at = @At("HEAD"), cancellable = true)
     public void onSendMessage(String message, CallbackInfo ci) {
-        final String newMsg = StringUtil.fillPetPhraseIn(message, PetphraseClient.getPetPhrase());
+        final String newMsg = StringUtil.fillPetPhraseIn(message, PetphraseClient.cfg.petPhrase);
         this.sendMessage(newMsg, true);
         ci.cancel();
     }
