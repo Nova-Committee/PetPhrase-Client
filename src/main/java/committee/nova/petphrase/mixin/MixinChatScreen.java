@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 public abstract class MixinChatScreen {
     @ModifyVariable(method = "sendMessage", argsOnly = true, at = @At("STORE"))
     private String modifyMsg(String chatMessage) {
-        return StringUtil.fillPetPhraseIn(chatMessage, PetphraseClient.petPhrase);
+        return StringUtil.fillPetPhraseIn(chatMessage, PetphraseClient.cfg.petPhrase);
     }
 }
