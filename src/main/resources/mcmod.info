@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "petphrase",
+    "name": "PetPhrase",
+    "description": "Apply pet phrase to your chat messages!",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "Tapio"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

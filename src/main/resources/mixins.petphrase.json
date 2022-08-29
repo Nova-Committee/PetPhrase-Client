@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "minVersion": "0.7.11",
+  "package": "committee.nova.petphrase.mixin",
+  "refmap": "mixins.petphrase.refmap.json",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+    "MixinGuiChat"
+  ]
+}
