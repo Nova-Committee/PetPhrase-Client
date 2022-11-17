@@ -14,7 +14,7 @@ apply plugin: 'maven-publish'
 
 version = "${version}"
 group = 'committee.nova.petphrase'
-archivesBaseName = 'PetPhrase-Client-Forge'
+archivesBaseName = 'PetPhrase-Client-Forge-1.12.2'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
