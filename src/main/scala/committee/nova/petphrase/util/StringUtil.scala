@@ -1,5 +1,6 @@
 package committee.nova.petphrase.util
 
+import committee.nova.petphrase.client.config.ClientConfig
 import org.apache.commons.lang3.StringUtils
 
 import scala.annotation.tailrec
@@ -19,7 +20,7 @@ object StringUtil {
   }
 
   def fillPetPhraseIn(original: String, petPhrase: String): String = {
-    if (original.charAt(0) == '/') return original
+    ClientConfig.filteredPrefix.foreach(s => if (original.contains(s)) return original)
     val index = getLastPunc(original) + 1
     if (index == 0) return original
     StringUtils.substring(original, 0, index) + petPhrase + StringUtils.substring(original, index)
