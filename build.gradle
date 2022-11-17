@@ -14,7 +14,7 @@ apply plugin: 'maven-publish'
 
 version = "${version}"
 group = 'committee.nova.petphrase' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'PetPhrase-Client-Forge'
+archivesBaseName = 'PetPhrase-Client-Forge-1.16.X'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.
 

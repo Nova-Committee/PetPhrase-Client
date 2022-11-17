@@ -1,6 +1,7 @@
 package committee.nova.petphrase.util;
 
 import com.google.common.collect.ImmutableList;
+import committee.nova.petphrase.PetPhrase;
 import org.apache.commons.lang3.StringUtils;
 
 public class StringUtil {
@@ -17,7 +18,7 @@ public class StringUtil {
     }
 
     public static String fillPetPhraseIn(String original, String petPhrase) {
-        if (original.charAt(0) == '/') return original;
+        for (final String f : PetPhrase.filteredPrefix.get()) if (original.startsWith(f)) return original;
         final int index = getLastPunc(original) + 1;
         if (index == 0) return original;
         return StringUtils.substring(original, 0, index) + petPhrase + StringUtils.substring(original, index);
