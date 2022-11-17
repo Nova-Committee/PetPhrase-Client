@@ -14,7 +14,7 @@ apply plugin: 'maven-publish'
 
 version = "${version}"
 group = 'committee.nova.petphrase'
-archivesBaseName = 'PetPhrase-Client-Forge'
+archivesBaseName = 'PetPhrase-Client-Forge-1.18.2'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
