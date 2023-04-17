@@ -19,6 +19,7 @@ public class StringUtil {
     }
 
     public static String fillPetPhraseIn(String original, String petPhrase) {
+        if (original == "") return original;
         for (final String f : PetPhrase.filteredPrefix.get()) if (original.startsWith(f)) return original;
         final int index = getLastPunc(original) + 1;
         if (index == 0) return original;
