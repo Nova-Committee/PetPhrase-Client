@@ -28,12 +28,11 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
     - name: Build with Gradle
-      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
-      with:
-        arguments: build
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v3.1.2
+      run: ./gradlew build -PuseCommitHashInVersion
+    - uses: actions/upload-artifact@v3.1.2
       with:
         # Artifact name
         name: PetPharse-Forge-1.18.2
